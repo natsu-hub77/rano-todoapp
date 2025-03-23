@@ -1,1 +1,15 @@
-%h1 HOME
+.container
+  %%h2.card-logo All Boards
+  - @boards.each do |board|
+    .card
+      .card_text
+        .card_title 
+          = board.title
+        .card_content
+          = board.content
+        .card_image
+          = image_tag 'default-user.png', class: 'user_avatar dropbtn'
+      .card_btn
+        = image_tag 'combined-shape.png', class: 'combined_shaped_btn'
+  .newboard
+    %p +Add new board

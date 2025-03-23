@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
     def index
-        render 'boards/index'
+        @boards = Board.all
     end
 
     def show

@@ -1,0 +1,55 @@
+.card-logo {
+    font-style: 18px;
+}
+
+
+.card {
+    background: #F4F4F4;
+    border-radius: 10px;
+    border: none;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.card_text {
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card_title {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.card_content {
+    font-size: 14px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    margin-bottom: 10px;
+
+}
+
+.user_avatar {
+    width: 30px;
+}
+
+.newboard {
+    border-radius: 10px;
+    border: 2px dotted #333;
+    border-color:#F4F4F4;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center;
+}
