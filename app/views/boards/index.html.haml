@@ -3,13 +3,18 @@
   - @boards.each do |board|
     .card
       .card_text
-        .card_title 
-          = board.title
-        .card_content
-          = board.content
-        .card_image
-          = image_tag 'default-user.png', class: 'user_avatar dropbtn'
-      .card_btn
-        = image_tag 'combined-shape.png', class: 'combined_shaped_btn'
+        = link_to board_path(board) do
+          .card_title 
+            = board.title
+          .card_content
+            = board.content
+          .card_image
+            = image_tag 'default-user.png', class: 'user_avatar dropbtn'
+      .card_nav
+        .card_btn
+          = image_tag 'combined-shape.png', class: 'combined_shaped_btn'
+        .dropdown-content.mini
+          = link_to 'Edit', edit_board_path(board)
+          %a{hef: "#"} Delete
   .newboard
     %p +Add new board

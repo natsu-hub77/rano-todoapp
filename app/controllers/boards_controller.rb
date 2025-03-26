@@ -3,8 +3,9 @@ class BoardsController < ApplicationController
         @boards = Board.all
     end
 
-    def show
 
+    def show
+        @board = Board.find(params[:id])
     end
 
     def new
@@ -18,7 +19,14 @@ class BoardsController < ApplicationController
         else
             render :new, notice: '保存できませんでした'
         end
+
+    def edit
+        @board = Board.find(params[:id])
     end
+
+    def update 
+    end
+end
 
     private
     def board_params
