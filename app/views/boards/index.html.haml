@@ -10,11 +10,12 @@
             = board.content
           .card_image
             = image_tag 'default-user.png', class: 'user_avatar dropbtn'
-      .card_nav
-        .card_btn
-          = image_tag 'combined-shape.png', class: 'combined_shaped_btn dropbtn'
-        .dropdown-content.mini
-          = link_to 'Edit', edit_board_path(board)
-          %a{hef: "#"} Delete
+      - if user_signed_in? && current_user.has_written?(board)
+        .card_nav
+          .card_btn
+            = image_tag 'combined-shape.png', class: 'combined_shaped_btn dropbtn'
+          .dropdown-content.mini
+            = link_to 'Edit', edit_board_path(board)
+            = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除していいですか？' }
   .newboard
     %p +Add new board
