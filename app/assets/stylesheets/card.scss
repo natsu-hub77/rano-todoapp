@@ -53,3 +53,13 @@
     justify-content: center; /* 水平方向の中央揃え */
     align-items: center;
 }
+
+.card_nav {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.card_nav:hover .dropdown-content {
+    display: block;
+  }
