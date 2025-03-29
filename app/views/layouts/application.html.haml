@@ -11,7 +11,7 @@
   
   %body
     %header.header
-      %p.header-logo Boards
+      %p.header-logo= link_to 'Boards', root_path, class: 'header-logo-link'
       - if user_signed_in?
         .dropdown
           = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
