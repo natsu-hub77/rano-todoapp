@@ -6,6 +6,7 @@ class BoardsController < ApplicationController
 
     def show
         @board = Board.find(params[:id])
+        @tasks = Task.where(board_id: @board.id)
     end
 
     def new

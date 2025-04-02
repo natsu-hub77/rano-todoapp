@@ -13,7 +13,7 @@ h2 {
     font-size: 18px;
 }
 
-.label {
+label {
     /* Name */
 
     width: 44px;
@@ -91,3 +91,8 @@ textarea {
     background: #F4F4F4;
     border-radius: 10px;
   }
+
+.file_field {
+    border: none;
+    outline: none;
+}
