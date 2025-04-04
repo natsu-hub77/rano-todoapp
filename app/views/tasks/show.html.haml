@@ -1,0 +1,19 @@
+.container
+  .task_header
+    %h2.task-logo 
+      = @tasks.title
+    .card_nav 
+      .card_btn 
+        = image_tag 'combined-shape.png', class: 'combined_shaped_btn dropbtn'
+      .dropdown-content.mini
+        =link_to 'Edit', edit_board_task_path(@board, @tasks)
+  .card_text
+    - if @tasks.eyecatch.attached?
+      .eyecatch_image
+        = image_tag @tasks.eyecatch, class: 'eyecatch_image'
+  .card
+    .card_content 
+      = @tasks.content
+
+
+  

@@ -35,7 +35,6 @@
     mix-blend-mode: normal;
     opacity: 0.4;
     margin-bottom: 10px;
-
 }
 
 .user_avatar {
@@ -66,4 +65,11 @@
 
   .eyecatch_image {
     max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .task_header {
+    display: flex;
+    align-items: center;
   }
