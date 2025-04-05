@@ -35,7 +35,6 @@
     mix-blend-mode: normal;
     opacity: 0.4;
     margin-bottom: 10px;
-
 }
 
 .user_avatar {
@@ -62,4 +61,15 @@
 
 .card_nav:hover .dropdown-content {
     display: block;
+  }
+
+  .eyecatch_image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .task_header {
+    display: flex;
+    align-items: center;
   }
