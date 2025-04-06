@@ -14,7 +14,6 @@
 }
 
 .card_text {
-    width: 90%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -73,3 +72,15 @@
     display: flex;
     align-items: center;
   }
+
+  .newcomment {
+    border-radius: 10px;
+    border: 2px dotted #333;
+    border-color:#F4F4F4;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center;
+}
