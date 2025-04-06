@@ -18,3 +18,52 @@
   margin-bottom: 20px;
   gap: 10px;
 }
+
+.task-logo {
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// コメント
+.task-card {
+  opacity: 1;
+}
+
+.comment-logo {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.comment-text {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-text {
+  display: flex;
+  align-items: center;
+}
+
+.comment-content {
+  /* Successful businesse */
+
+// position: absolute;
+// width: 298px;
+// height: 57px;
+// left: 86px;
+// top: 677px;
+
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: #000000;
+}
+
+.newcomment {
+  margin-top: 20px;
+}
