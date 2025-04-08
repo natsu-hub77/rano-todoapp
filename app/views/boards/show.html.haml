@@ -9,17 +9,6 @@
     .card_image
       = image_tag 'default-user.png', class: 'user_avatar dropbtn'
   - @tasks.each do |task|
-    .card
-      .card_text
-        = link_to board_task_path(@board, task) do
-          - if task.eyecatch.attached?
-            .eyecatch_image
-              = image_tag task.eyecatch, class: 'eyecatch_image'
-          .card_title
-            = task.title
-          .card_content 
-            = task.content
-          .card_image
-            = image_tag 'default-user.png', class: 'user_avatar dropbtn'
+    =render 'task', task: task
   .newtask 
     %p= link_to '+Add new card', new_board_task_path(@board)

@@ -1,21 +1,6 @@
 .container
   %h2.card-logo All Boards
   - @boards.each do |board|
-    .card
-      .card_text
-        = link_to board_path(board) do
-          .card_title 
-            = board.title
-          .card_content
-            = board.content
-          .card_image
-            = image_tag 'default-user.png', class: 'user_avatar dropbtn'
-      - if user_signed_in? && current_user.has_written?(board)
-        .card_nav
-          .card_btn
-            = image_tag 'combined-shape.png', class: 'combined_shaped_btn dropbtn'
-          .dropdown-content.mini
-            = link_to 'Edit', edit_board_path(board)
-            = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除していいですか？' }
+    =render 'board', board: board
   .newboard
     %p= link_to '+Add new board', new_board_path

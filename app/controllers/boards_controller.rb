@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+    before_action :set_board, only: [:edit, :update]
+
     def index
         @boards = Board.all
     end
@@ -18,16 +20,15 @@ class BoardsController < ApplicationController
         if @board.save
             redirect_to board_path(@board), notice: '保存できました'
         else
-            render :new, notice: '保存できませんでした'
+            flash.now[:error] = '保存できませんでした'
+            render :new
         end
     end
 
     def edit
-        @board = current_user.boards.find(params[:id])
     end
 
     def update
-        @board = current_user.boards.find(params[:id])
         if @board.update(board_params)
             redirect_to board_path(@board), notice: '更新できました'
         else
@@ -46,4 +47,9 @@ class BoardsController < ApplicationController
     def board_params
         params.require(:board).permit(:title, :content)
     end
+    
+    def set_board
+        @board = current_user.boards.find(params[:id])
+    end
+    
 end

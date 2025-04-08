@@ -11,12 +11,20 @@
   
   %body
     %header.header
-      %p.header-logo= link_to 'Boards', root_path, class: 'header-logo-link'
+      .header_logos
+        - if !current_page?(root_path)
+          = link_to :back do
+            = image_tag 'back.png', class: 'header_back'
+        %p.header-logo= link_to 'Boards', root_path, class: 'header-logo-link'
       - if user_signed_in?
         .dropdown
           = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
           .dropdown-content
             = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete'}
+      - if flash.present?
+        .flash 
+          - flash.each do |key, value|
+            .key{class: "%= %"}= value
     = yield
-    %p.notice= notice
-    %p.alert= alert
+    -# %p.notice= notice
+    -# %p.alert= alert
