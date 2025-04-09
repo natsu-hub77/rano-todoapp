@@ -26,6 +26,7 @@ class Board < ApplicationRecord
   belongs_to :user
   has_many :tasks, dependent: :destroy
 
+
   private
   def validate_title_and_content_length
     char_count = self.title.length + self.content.length
