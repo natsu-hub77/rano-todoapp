@@ -5,7 +5,6 @@ class BoardsController < ApplicationController
         @boards = Board.all
     end
 
-
     def show
         @board = Board.find(params[:id])
         @tasks = Task.where(board_id: @board.id)
@@ -15,7 +14,7 @@ class BoardsController < ApplicationController
         @board = current_user.boards.build
     end
 
-    def create 
+    def create
         @board = current_user.boards.build(board_params)
         if @board.save
             redirect_to board_path(@board), notice: '保存できました'
@@ -47,9 +46,9 @@ class BoardsController < ApplicationController
     def board_params
         params.require(:board).permit(:title, :content)
     end
-    
+
     def set_board
         @board = current_user.boards.find(params[:id])
     end
-    
+
 end
