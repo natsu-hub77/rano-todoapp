@@ -3,13 +3,13 @@
 # Table name: tasks
 #
 #  id         :bigint           not null, primary key
-#  content    :text
+#  content    :text             not null
 #  deadline   :datetime
-#  title      :string
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  board_id   :bigint
-#  user_id    :bigint
+#  board_id   :bigint           not null
+#  user_id    :bigint           not null
 #
 # Indexes
 #
