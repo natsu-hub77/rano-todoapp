@@ -34,4 +34,9 @@ class User < ApplicationRecord
   def has_written_task?(task)
     tasks.exists?(id: task.id)
   end
+
+  def display_name
+    self.email.split('@')[0]
+    self.email.split('@').first
+  end
 end
