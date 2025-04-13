@@ -27,6 +27,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one :profile, dependent: :destroy
 
+  delegate :birthday, :gender, to: :profile, allow_nil: true
+
   def has_written?(board)
     boards.exists?(id: board.id)
   end
@@ -36,7 +38,25 @@ class User < ApplicationRecord
   end
 
   def display_name
-    self.email.split('@')[0]
-    self.email.split('@').first
+    # if profile && profile.name
+    #   profile.name
+    # else
+    #   self.email.split('@').first
+    # self.email.split('@')[0]
+    # end
+
+    profile&.name || self.email.split('@').first
+  end
+  
+  # def birthday
+  #   profile&.birthday
+  # end
+
+  # def gender
+  #   profile&.gender
+  # end
+
+  def prepare_profile
+    profile || build_profile
   end
 end
