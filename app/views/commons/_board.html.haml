@@ -6,7 +6,7 @@
       .card_content
         = board.content
       .card_image
-        = image_tag 'default-user.png', class: 'user_avatar dropbtn'
+        = image_tag board.user.avatar_image, class: 'user_avatar dropbtn'
   - if user_signed_in? && current_user.has_written?(board)
     .card_nav
       .card_btn
