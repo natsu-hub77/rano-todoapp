@@ -7,7 +7,7 @@
     .card_content
       = @board.content
     .card_image
-      = image_tag 'default-user.png', class: 'user_avatar dropbtn'
+      = image_tag @board.user.avatar_image, class: 'user_avatar dropbtn'
   - @tasks.each do |task|
     =render 'task', task: task
   .newtask 

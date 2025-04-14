@@ -1,6 +1,6 @@
 .container
   %h2.card-logo All Boards
   - @boards.each do |board|
-    =render 'board', board: board
+    =render 'commons/board', board: board
   .newboard
     %p= link_to '+Add new board', new_board_path
