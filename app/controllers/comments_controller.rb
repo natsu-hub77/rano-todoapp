@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_board, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create,]
 
   def new
     task = @board.tasks.find(params[:task_id])
