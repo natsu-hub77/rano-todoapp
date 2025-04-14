@@ -15,7 +15,7 @@
         - if !current_page?(root_path)
           = link_to :back do
             = image_tag 'back.png', class: 'header_back'
-          %p.header-logo= link_to 'Boards', root_path, class: 'header-logo-link'
+        %p.header-logo= link_to 'Boards', root_path, class: 'header-logo-link'
       - if user_signed_in?
         .dropdown
           = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'

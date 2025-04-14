@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   before_action :set_board, only: [:show, :new, :create, :edit, :update]
   before_action :set_task, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @tasks = Tasks.all
