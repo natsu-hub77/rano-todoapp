@@ -35,6 +35,7 @@ gem 'devise'
 gem 'hamlit'
 gem 'faker'
 gem 'aws-sdk-s3', require: false
+gem 'ffi', '~> 1.15.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
