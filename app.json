@@ -5,10 +5,10 @@
   "website": "",
   "repository": "https://github.com/natsu-hub77/rano-todoapp",
   "env": {},
-  "stack": "heroku-20",
   "addons": [
     "heroku-postgresql:hobby-dev"
   ],
+  "stack": "heroku-20",
   "buildpacks": [{
     "url": "heroku/nodejs"
   }, {
